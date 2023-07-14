@@ -6,7 +6,7 @@
 /*   By: hhino <hhino@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/03 18:56:51 by hhino             #+#    #+#             */
-/*   Updated: 2023/07/09 12:05:37 by hhino            ###   ########.fr       */
+/*   Updated: 2023/07/14 17:59:49 by hhino            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,10 +41,10 @@ int	julia_set(double x, double y, t_data data)
 	double		temp;
 	int			color;
 
-	c.re = data.c_re;
-	c.im = data.c_im;
 	z.re = x;
 	z.im = y;
+	c.re = data.c_re;
+	c.im = data.c_im;
 	iterations = 0;
 	while (z.re * z.re + z.im * z.im < 4.0 && iterations < MAX_ITERATIONS)
 	{

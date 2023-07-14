@@ -1,10 +1,10 @@
 NAME = fractol
 
-SRCS := mandelbrot_ver2.c\
+SRCS := mandelbrot.c\
 		close.c\
 		main.c\
 		mouse.c\
-		julia_ver2.c\
+		julia.c\
 		utils.c\
 		utils2.c
 
@@ -13,9 +13,6 @@ CC = cc
 CFLAGS = -Wall -Wextra -Werror
 
 all: 	$(NAME)
-
-%.o: %.c
-	$(CC) -Wall -Wextra -Werror -c $< -o $@
 
 $(NAME): $(OBJS)
 	$(CC) $(OBJS) -lmlx -framework OpenGL -framework AppKit -o $(NAME)

@@ -6,7 +6,7 @@
 /*   By: hhino <hhino@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/02 16:38:50 by hhino             #+#    #+#             */
-/*   Updated: 2023/07/09 12:08:06 by hhino            ###   ########.fr       */
+/*   Updated: 2023/07/14 17:59:42 by hhino            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,7 +41,7 @@ int	mandelbrot_set(double x, double y)
 	z.re = 0.0;
 	z.im = 0.0;
 	iterations = 0;
-	while (z.re * z.re + z.im * z.im <= 4.0 && iterations < (MAX_ITERATIONS))
+	while (z.re * z.re + z.im * z.im < 4.0 && iterations < (MAX_ITERATIONS))
 	{
 		temp = z.re * z.re - z.im * z.im + c.re;
 		z.im = 2.0 * z.re * z.im + c.im;
